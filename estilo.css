@@ -1,0 +1,177 @@
+*{
+	box-sizing: border-box;
+	font-family: cursive,sans-serif;
+
+	
+
+
+}
+
+
+
+
+/*-------- ESTILO PARA GALERIA--------*/
+
+
+.menu{
+
+	display: none;
+}
+
+
+
+h1{
+   
+
+  color: #fff;
+  text-align: center;
+  margin: 5px
+  font-size: 40px;
+  position: relative;
+  background-color: rgba(1, 0, 0, 0.5);
+  text-shadow: 7px #000;
+
+}
+
+.barra{
+	background: #000000;
+	height: 2px;
+
+}
+
+.contain-img{
+
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	grid-gap: 15px;
+	margin: 10px auto;
+	justify-content: center;
+
+}
+
+.img{
+
+	object-fit: cover;
+	width: 350px;
+	height: 350px;
+	border: 0.7px solid #f0c;
+}
+
+.img:hover{
+    
+    width: 355px;
+	height: 355px;
+	cursor: pointer;
+	transition: 0.9s;
+
+	
+}
+
+.sombra{
+
+   position:fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translateX(-110%);
+   transition: 1s;
+
+}
+
+.sombra-move{
+    
+    transition: 1s;
+	transform: translateX(0);
+}   
+
+
+
+
+.sombra-contain{
+    
+    width: 80%;
+	height: 90%;
+	position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.img-principal{
+    
+    width: 80%;
+	height: 90%;
+	object-fit: cover;
+	border-radius: 10px;
+
+	
+}
+
+.cierre{
+
+	position: absolute;
+	font-size: 1rem;
+	right: 30px;
+	top: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	cursor: pointer;
+
+}
+
+
+
+
+
+/*RESPONSIVE STYLE*/
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+
+	.contain-img{
+         display: flex;
+         flex-wrap: wrap;
+	}
+
+	.cierre{
+		top: 0px;
+		right: 45%;
+	}
+
+
+}
+
+@media screen and (min-width: 2560px){
+     
+    h1{
+  
+      font-size: 80px;
+}
+   
+
+
+
+    .contain-img{
+
+    display: grid;
+	grid-template-columns: repeat(3, 700px);
+	grid-gap: 15px;
+	margin: 10px auto;
+	justify-content: center;
+    
+    }
+
+	.img{
+
+		width: 700px;
+		height: 700px;
+
+	}
+}
